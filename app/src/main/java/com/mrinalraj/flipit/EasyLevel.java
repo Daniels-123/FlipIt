@@ -144,10 +144,10 @@ public class EasyLevel extends Fragment {
                 if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP){
                     isPaused = true;
                     AlertDialog.Builder pause = new AlertDialog.Builder(getContext());
-                    pause.setTitle("Game paused");
-                    pause.setMessage("Do you want to quit ?");
+                    pause.setTitle("Juego Pausado");
+                    pause.setMessage("¿Quieres salir?");
                     pause.setCancelable(false);
-                    pause.setPositiveButton("Resume", new DialogInterface.OnClickListener() {
+                    pause.setPositiveButton("Continuar", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             isPaused = false;
@@ -159,7 +159,7 @@ public class EasyLevel extends Fragment {
                                         cancel();
                                     }
                                     else {
-                                        ((TextView) rootView.findViewById(R.id.easylevelcounter)).setText("Time : " + millisUntilFinished / Constants.TIMER_INTERVAL);
+                                        ((TextView) rootView.findViewById(R.id.easylevelcounter)).setText("Tiempo : " + millisUntilFinished / Constants.TIMER_INTERVAL);
                                         RemainingTime = millisUntilFinished;
                                         if (count == Constants.EASY_NO_OF_CARDS) {
                                             b.putString("Data", "win");
@@ -182,7 +182,7 @@ public class EasyLevel extends Fragment {
                             }.start();
                         }
                     });
-                    pause.setNegativeButton("Quit", new DialogInterface.OnClickListener() {
+                    pause.setNegativeButton("Salir", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             isCancelled = true;
@@ -226,8 +226,8 @@ public class EasyLevel extends Fragment {
                                         new Handler().postDelayed(new Runnable() {
                                             @Override
                                             public void run() {
-                                                flippedCard.setVisibility(View.GONE);
-                                                child.setVisibility(View.GONE);
+                                                //flippedCard.setVisibility(View.GONE);
+                                                //child.setVisibility(View.GONE);
                                                 child.setEnabled(false);
                                                 flippedCard.setEnabled(false);
                                                 flippedCard=null;

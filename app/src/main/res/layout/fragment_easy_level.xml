@@ -28,6 +28,8 @@
         />
 
 
+
+
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,6 +37,16 @@
         android:id="@+id/easylevelview"
         android:layout_centerHorizontal="true" />
 
+    <ImageView
+        android:id="@+id/footer"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center|bottom"
 
+        android:src="@drawable/livetech">
+
+    </ImageView>
 
 </RelativeLayout>

@@ -150,10 +150,10 @@ public class HardLevel extends Fragment {
                 if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP){
                     isPaused = true;
                     AlertDialog.Builder pause = new AlertDialog.Builder(getContext());
-                    pause.setTitle("Game paused");
+                    pause.setTitle("Juego Pausado");
                     pause.setCancelable(false);
-                    pause.setMessage("Do you want to quit ?");
-                    pause.setPositiveButton("Resume", new DialogInterface.OnClickListener() {
+                    pause.setMessage("¿Quieres Salir?");
+                    pause.setPositiveButton("Continuar", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             isPaused = true;
@@ -164,7 +164,7 @@ public class HardLevel extends Fragment {
                                         cancel();
                                     }
                                     else {
-                                        ((TextView) view.findViewById(R.id.hardlevelcounter)).setText("Time : " + millisUntilFinished / Constants.TIMER_INTERVAL);
+                                        ((TextView) view.findViewById(R.id.hardlevelcounter)).setText("Tiempo : " + millisUntilFinished / Constants.TIMER_INTERVAL);
                                         RemainingTime = millisUntilFinished;
                                         if (count == Constants.HARD_NO_OF_CARDS) {
                                             b.putString("Data", "win");
@@ -187,7 +187,7 @@ public class HardLevel extends Fragment {
                             }.start();
                         }
                     });
-                    pause.setNegativeButton("Quit", new DialogInterface.OnClickListener() {
+                    pause.setNegativeButton("Salir", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             isCancelled =true;
@@ -231,8 +231,8 @@ public class HardLevel extends Fragment {
                                         new Handler().postDelayed(new Runnable() {
                                             @Override
                                             public void run() {
-                                                flippedCard.setVisibility(View.GONE);
-                                                child.setVisibility(View.GONE);
+                                             //   flippedCard.setVisibility(View.GONE);
+                                              //  child.setVisibility(View.GONE);
                                                 child.setEnabled(false);
                                                 flippedCard.setEnabled(false);
                                                 flippedCard=null;

@@ -73,18 +73,18 @@ public class Result extends Fragment {
             ((TextView)rootView.findViewById(R.id.r2)).setText("I");
             ((TextView)rootView.findViewById(R.id.r3)).setText("C");
             ((TextView)rootView.findViewById(R.id.r4)).setText("E");
-            ((TextView) rootView.findViewById(R.id.desc1)).setText("You won!");
-            ((TextView) rootView.findViewById(R.id.desc2)).setText("Nice work, you can always improve your best time");
-            ((TextView) rootView.findViewById(R.id.time)).setText("Your time : "+b.get("Time").toString());
+            ((TextView) rootView.findViewById(R.id.desc1)).setText("Ganaste!");
+            ((TextView) rootView.findViewById(R.id.desc2)).setText("Excelente trabajo, siempre puedes mejorar tu tiempo");
+            ((TextView) rootView.findViewById(R.id.time)).setText("Tu tiempo  : "+b.get("Time").toString());
         }
         else{
             ((TextView)rootView.findViewById(R.id.r1)).setText("L");
             ((TextView)rootView.findViewById(R.id.r2)).setText("O");
             ((TextView)rootView.findViewById(R.id.r3)).setText("S");
             ((TextView)rootView.findViewById(R.id.r4)).setText("T");
-            ((TextView) rootView.findViewById(R.id.desc1)).setText("Nice  try, but you lost.");
-            ((TextView) rootView.findViewById(R.id.desc2)).setText("Try improving the score to win");
-            ((TextView) rootView.findViewById(R.id.time)).setText("Your time : "+b.get("Time").toString());
+            ((TextView) rootView.findViewById(R.id.desc1)).setText("Buen intento, pero perdiste.");
+            ((TextView) rootView.findViewById(R.id.desc2)).setText("Intenta mejorar la puntuación para ganar");
+            ((TextView) rootView.findViewById(R.id.time)).setText("Tu Tiempo : "+b.get("Time").toString());
         }
         return rootView;
     }

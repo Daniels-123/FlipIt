@@ -28,17 +28,17 @@ public class Home extends AppCompatActivity{
         counter++;
         if (currentFragment instanceof Start){
             AlertDialog.Builder exit = new AlertDialog.Builder(this);
-            exit.setTitle("Do you really want to go?");
-            exit.setPositiveButton("Yes, please.", new DialogInterface.OnClickListener() {
+            exit.setTitle("¿De verdad quieres empezar?");
+            exit.setPositiveButton("Si, por favor.", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     finish();
                 }
             });
-            exit.setNegativeButton("Umm, I can stay.", new DialogInterface.OnClickListener() {
+            exit.setNegativeButton("Umm, puedo quedarme.", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    Toast.makeText(Home.this, "Welcome back.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Home.this, "Bienvenido de nuevo.", Toast.LENGTH_SHORT).show();
                 }
             });
 
